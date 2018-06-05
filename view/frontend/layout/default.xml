@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Carousel
+ * 
+ * @author Slava Yurthev
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="SY_Carousel::css/owl.carousel.css" />
+		<css src="SY_Carousel::css/owl.theme.default.css" />
+	</head>
+	<body>
+		<referenceContainer name="before.body.end">
+			<block class="Magento\Framework\View\Element\Template" name="sy.copyright.link" template="SY_Carousel::copyright/link.phtml" />
+		</referenceContainer>
+	</body>
+</page>

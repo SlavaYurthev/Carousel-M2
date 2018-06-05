@@ -1,0 +1,30 @@
+<?php
+/**
+ * Carousel
+ * 
+ * @author Slava Yurthev
+ */
+?>
+<?php $collection = $this->getCollection(); ?>
+<?php if($collection->count() > 0): ?>
+	<div class="owl-carousel owl-theme" data-mage-init='{"SY_Carousel/js/carousel":{
+			"items":<?php echo (int)$this->getData("items"); ?>,
+			"nav":<?php echo $this->getData("nav"); ?>,
+			"dots":<?php echo $this->getData("dots"); ?>,
+			"loop":<?php echo $this->getData("loop"); ?>,
+			"autoplay":<?php echo $this->getData("autoplay"); ?>,
+			"margin":10
+		}}'>
+		<?php foreach($collection as $item): ?>
+			<div class="item">
+				<a href="<?php echo $item->getProductUrl(); ?>"><img src="<?php echo $this->getImageUrl($item); ?>"></a>
+				<h4><a href="<?php echo $item->getProductUrl(); ?>"><?php echo $item->getName(); ?></a></h4>
+				<?php echo $this->getLayout()->getBlock('product.price.render.default')->render(
+						'final_price',
+						$item,
+						[]
+					); ?>
+			</div>
+		<?php endforeach; ?>
+	</div>
+<?php endif; ?>

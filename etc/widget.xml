@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Carousel
+ * 
+ * @author Slava Yurthev
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget id="sy_products_carousel_widget" class="SY\Carousel\Block\Widget\Carousel\Products" placeholder_image="SY_Carousel::images/widget/products.png">
+		<label translate="true">Products Carousel</label>
+		<description></description>
+		<parameters>
+			<parameter name="ids" xsi:type="block" visible="true" required="true" sort_order="1">
+				<label translate="true">Ids</label>
+				<block class="SY\Carousel\Block\Adminhtml\Widget\Products\Chooser">
+					<data>
+						<item name="button" xsi:type="array">
+							<item name="open" xsi:type="string" translate="true">Select</item>
+						</item>
+					</data>
+				</block>
+			</parameter>
+			<parameter name="items" xsi:type="text" visible="true" required="true" sort_order="2">
+				<label translate="true">Items</label>
+				<value>5</value>
+			</parameter>
+			<parameter name="nav" xsi:type="select" visible="true" sort_order="3" source_model="Magento\Config\Model\Config\Source\Yesno">
+				<label translate="true">Nav</label>
+			</parameter>
+			<parameter name="dots" xsi:type="select" visible="true" sort_order="4" source_model="Magento\Config\Model\Config\Source\Yesno">
+				<label translate="true">Dots</label>
+			</parameter>
+			<parameter name="loop" xsi:type="select" visible="true" sort_order="5" source_model="Magento\Config\Model\Config\Source\Yesno">
+				<label translate="true">Loop</label>
+			</parameter>
+			<parameter name="autoplay" xsi:type="select" visible="true" sort_order="6" source_model="Magento\Config\Model\Config\Source\Yesno">
+				<label translate="true">Autoplay</label>
+			</parameter>
+		</parameters>
+	</widget>
+	<widget id="sy_static_blocks_carousel_widget" class="SY\Carousel\Block\Widget\Carousel\StaticBlocks" placeholder_image="SY_Carousel::images/widget/static_blocks.png">
+		<label translate="true">Static Blocks Carousel</label>
+		<description></description>
+		<parameters>
+			<parameter name="ids" xsi:type="block" visible="true" required="true" sort_order="1">
+				<label translate="true">Ids</label>
+				<block class="SY\Carousel\Block\Adminhtml\Widget\StaticBlocks\Chooser">
+					<data>
+						<item name="button" xsi:type="array">
+							<item name="open" xsi:type="string" translate="true">Select</item>
+						</item>
+					</data>
+				</block>
+			</parameter>
+			<parameter name="items" xsi:type="text" visible="true" required="true" sort_order="2">
+				<label translate="true">Items</label>
+				<value>5</value>
+			</parameter>
+			<parameter name="nav" xsi:type="select" visible="true" sort_order="3" source_model="Magento\Config\Model\Config\Source\Yesno">
+				<label translate="true">Nav</label>
+			</parameter>
+			<parameter name="dots" xsi:type="select" visible="true" sort_order="4" source_model="Magento\Config\Model\Config\Source\Yesno">
+				<label translate="true">Dots</label>
+			</parameter>
+			<parameter name="loop" xsi:type="select" visible="true" sort_order="5" source_model="Magento\Config\Model\Config\Source\Yesno">
+				<label translate="true">Loop</label>
+			</parameter>
+			<parameter name="autoplay" xsi:type="select" visible="true" sort_order="6" source_model="Magento\Config\Model\Config\Source\Yesno">
+				<label translate="true">Autoplay</label>
+			</parameter>
+		</parameters>
+	</widget>
+</widgets>
